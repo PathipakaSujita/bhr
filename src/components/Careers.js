@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Modal, Button } from 'react-bootstrap';
+import { Container, Modal, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap/dist/react-bootstrap.min.js';
 
@@ -11,10 +11,19 @@ function Careers() {
     <div className="careers-div" id="careers">
       <h2 className="headline"> Careers </h2>
       <Container>
-        <div className="career-div" onClick={handleShow}>
-          Quality Assurance Analyst<br /> Iselin, NJ<br /> Date: 31/11/2020
-        </div>
-
+        <Row xs={1} sm={1} md={2}>
+          <Col>
+            <div className="career-div" onClick={handleShow}>
+              Quality Assurance Analyst<br /> Iselin, NJ<br /> Date: 31/11/2020
+            </div>
+          </Col>
+          <Col>
+            <div className="career-div" onClick={handleShow}>
+              Sr Quality Assurance Analyst <br /> Iselin, NJ<br /> Date:
+              31/11/2020
+            </div>
+          </Col>
+        </Row>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Job Requirements</Modal.Title>
